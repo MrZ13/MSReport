@@ -1,0 +1,13 @@
+server:
+  port: 40000
+
+Spring:
+  application:
+    name: feign
+  main:
+    allow-bean-definition-overriding: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://eureka1:7001/eureka/,http://eureka2:7002/eureka/,http://eureka3:7003/eureka/

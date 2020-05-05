@@ -1,0 +1,26 @@
+server:
+  port: 8002
+spring:
+  application:
+    #control the name of micro-service
+    name: provider
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: 160039
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: cn.edu.neu.zy.provider.bean
+logging:
+  level:
+    root: INFO
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7002/eureka/
+  instance:
+    #control the id of micro-service
+    instance-id: provider2
+    prefer-ip-address: true
+

@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: register-center
+server:
+  port: 7003
+eureka:
+  server:
+    #turn off self-defend，which allows us to do the demo,when used in actual environment,we can simply turn it on
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 5000
+  client:
+    #turn off auto-regi, because this project itself is a server
+    register-with-eureka: true
+    fetch-registry: false
+    service-url:
+#      defaultZone: http://localhost:7001,http://loaclhost:7002
+#      defalutZone: http://${eureka.instance.homename}:${server.port}/eureka/
+       defaultZone: http://eureka1:7001/eureka/,http://eureka2:7002/eureka/
+
+  instance:
+    prefer-ip-address: true
+    hostname: eureka3
+
