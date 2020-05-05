@@ -17,7 +17,7 @@ eureka:
     instance-id: provider4
 mybatis:
   mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: cn.edu.neu.zy.cn.edu.neu.zy.provider.bean
+  type-aliases-package: cn.edu.neu.zy.provider.bean
 
 
 info.app.name: cn.edu.neu.zy.provider
